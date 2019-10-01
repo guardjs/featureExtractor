@@ -1,0 +1,25 @@
+{
+  "name": "extatistical.js",
+  "version": "1.0.0",
+  "description": "this package will extract statistical features from code string ",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/safeguardians/malwareFeatureExtractor.git"
+  },
+  "keywords": [
+    "feature",
+    "dataset",
+    "text",
+    "analysis"
+  ],
+  "author": "easa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/safeguardians/malwareFeatureExtractor/issues"
+  },
+  "homepage": "https://github.com/safeguardians/malwareFeatureExtractor#readme"
+}
