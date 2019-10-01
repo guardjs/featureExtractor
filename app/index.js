@@ -1,6 +1,5 @@
 
 
-var path = require('path')
 var fs = require('fs')
 var app = {}
 
@@ -21,8 +20,5 @@ function load(folder) {
 		app[featureName[1]] = require(`./${folder}/${file}`)
 	})
 }
-
-// fs.readdirSync(path.resolve(folder), (err, files) => {
-
 
 module.exports = app
