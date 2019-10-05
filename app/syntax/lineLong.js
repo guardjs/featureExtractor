@@ -5,6 +5,7 @@
 function app(str) {
   var line = str.match(/([\w\W])\n/g)
   // var wMap = wordMap(str)
+  if (!line) return 0
   var linelong = line.map(i => i.length)
   var avgLong = linelong.reduce((p, c) => { p += c; return p }, 0) / linelong.length
   return avgLong

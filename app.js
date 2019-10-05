@@ -1,10 +1,13 @@
 
 
+/** this is a test page by now */
 var app = require('./app/index')
 
-var str = app.exStr(`this is 'hello' and this is "world" !`)
-console.log(str)
+var result = [], str = `this is 'hello' and this is var word="world" !`
 
-var long = app.longestWord('this is a veryLong9 word')
-var long1 = app.tinestWord('this is a veryshort word')
-console.log(`the longest string is ${long} long and tiniest is ${long1}`)
+// call all functions
+Object.keys(app).forEach(func => { result.push(app[func](str)) })
+
+// log all results
+console.log(`-----features: \n ${Object.keys(app).reduce((i, c) => i += ', ' + c)}`)
+console.log(`-----feature-raw: \n ${result.reduce((i, c) => i += ', ' + c)}`)
