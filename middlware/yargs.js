@@ -21,13 +21,11 @@ yargs.command('serve [d]', 'creates the features', (yargs) => {
     default: './result.csv'
   })
 }, (argv) => {
-  if (argv) console.error(`GUARDJS: process is started checkout ${argv.r}`)
+  if (argv) console.error(`GUARDJS: process is started checkout ${argv.n}`)
   opt.resultFile = argv.r
   opt.folder = argv.d
-  if (argv.v)
-    opt.isRawRequired = true
-  if (argv.n)
-    opt.isFeatureNameRequired = true
+  opt.isRawRequired = argv.v
+  opt.isFeatureNameRequired = argv.n
 }).option('directory', {
   alias: 'd',
   default: './samples'
