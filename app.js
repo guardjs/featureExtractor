@@ -1,10 +1,29 @@
 
 
-var app = require('./app/index')
+/**
+ *  Developed by easa 
+ *  this is a test page by now!
+ *  using yargs to parse args
+ * 
+ * requisites: nodejs, npm i
+ * 
+ * $ node app [command] --[option] --[option] so on...
+ * 
+ * to save result on file use "> filename" command
+*/
+var mid = require('./middlware/')
+var app = require('./app/')
 
-var str = app.exStr(`this is 'hello' and this is "world" !`)
-console.log(str)
+var result = [],
+  opt = mid.argv || {}
+samplestr = `this is 'hello' and this is var word="world" !`,
+  str = opt.input || samplestr
 
-var long = app.longestWord('this is a veryLong9 word')
-var long1 = app.tinestWord('this is a veryshort word')
-console.log(`the longest string is ${long} long and tiniest is ${long1}`)
+// result the list of feature names
+if (opt.isFeatureNameRequired)
+  console.log(Object.keys(app).reduce((i, c) => i += ', ' + c))
+// result a raw or raws of feature values
+if (opt.isRawRequired) {
+  Object.keys(app).forEach(func => { result.push(app[func](str)) })
+  console.log(result.reduce((i, c) => i += ', ' + c))
+}
