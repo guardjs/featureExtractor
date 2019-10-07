@@ -12,8 +12,8 @@ It is for getting these specific features from js files, but thanks to beautiful
 * app works with `serve` command like `$ node app serve`
 
 ### Commands
-* `serve --directory="c:\\workspace\samples" --result="result.csv"`
-* `serve -d="c:\\workspace\samples" -d="result.csv" -a` for append new feature value raw to an existing file
+* `serve --directory="$workspace\samples" --result="result.csv"`
+* `serve -d="$workspace\samples" -d="result.csv" -a` for append new feature value raw to an existing file
 * `features` to show just a the feature set
 
 # Feature set
