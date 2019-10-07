@@ -17,7 +17,8 @@ It is for getting these specific features from js files, but thanks to beautiful
 * `features` to show just a the feature set
 
 # Feature set
-Attention: the order of features are by the order of files of feature-model that the app uses and the order of features here isn't a default order! THERE'S NOT ANY ORDER
+Attention: the order of features are by the order of files of feature-model that the app uses and the order of features here isn't a default order! THERE'S NOT ANY ORDER  
+
  no. |          feature          |                  description                  
 ---|-------------------------|---------------------------------------------
   1  |           eval            |              The number of eval               
