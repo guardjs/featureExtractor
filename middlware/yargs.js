@@ -28,6 +28,7 @@ yargs.command('serve [d]', 'creates the features', (yargs) => {
   opt.isFeatureNameRequired = argv.n
 }).option('directory', {
   alias: 'd',
+  demandOption: true,
   default: './samples'
 }).option('result', {
   alias: 'r',
@@ -36,12 +37,14 @@ yargs.command('serve [d]', 'creates the features', (yargs) => {
   type: Boolean,
   alias: 'n',
   default: false
-}).option('result', {
+}).option('values', {
   type: Boolean,
   alias: 'v',
   default: false
 }).command('feature', 'show the features list', (yargs) => { }, (param) => {
   opt.isFeatureNameRequired = true
 }).argv
+
+console.log(opt)
 
 module.exports = opt
