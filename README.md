@@ -70,7 +70,7 @@ Attention: the order of features are by the order of files of feature-model that
 `app` folder contains feature-models.
 `middleware` folder is for some initializing and some functionality provided in the way to do the main job.
 `app.js` file is the main process of the algorithem! I tried to make it simple and readable :)).  
-
+```  
 .
 +-- _app  
 |   +-- syntax  
@@ -80,7 +80,7 @@ Attention: the order of features are by the order of files of feature-model that
 |   +-- yargs.js  
 |   +-- index.js  
 +-- app.js
-
+```
 
 # farther question
 Don't hesitate to contact me about this project  
