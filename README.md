@@ -72,11 +72,13 @@ Attention: the order of features are by the order of files of feature-model that
 `app.js` file is the main process of the algorithem! I tried to make it simple and readable :)).  
 ```  
 .
-+-- _app  
-|   +-- syntax  
-|   +-- graph  
++-- - app  
+|   +-- - syntax  
+    |   +-- + common  
+|   +-- - graph  
+    |   +-- + common  
 |   +-- index.js  
-+-- _middleware  
++-- - middleware  
 |   +-- yargs.js  
 |   +-- index.js  
 +-- app.js
