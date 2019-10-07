@@ -20,16 +20,16 @@ It is for getting these specific features from js files, but thanks to beautiful
 Attention: the order of features are by the order of files of feature-model that the app uses and the order of features here isn't a default order! THERE'S NOT ANY ORDER  
 
 | no. | feature                   | description                                   |
-|-----|---------------------------|-----------------------------------------------|
-| 1   | eval                      | The number of eval                            |
-| 2   | setTimeout                | The number of setTimeout                      |
-| 3   | iframe                    | The number of strings containing “iframe”     |
-| 4   | unescape                  | The number of unescape                        |
-| 5   | escape                    | The number of escape                          |
-| 6   | classid                   | The number of classid                         |
-| 7   | parseInt                  | The number of parseInt                        |
-| 8   | fromCharCode              | The number of fromCharCode                    |
-| 9   | ActiveXObject             | The number of ActiveXObject                   |
+|:---:|---------------------------|-----------------------------------------------|
+|  1  | eval                      | The number of eval                            |
+|  2  | setTimeout                | The number of setTimeout                      |
+|  3  | iframe                    | The number of strings containing “iframe”     |
+|  4  | unescape                  | The number of unescape                        |
+|  5  | escape                    | The number of escape                          |
+|  6  | classid                   | The number of classid                         |
+|  7  | parseInt                  | The number of parseInt                        |
+|  8  | fromCharCode              | The number of fromCharCode                    |
+|  9  | ActiveXObject             | The number of ActiveXObject                   |
 | 10  | strDirect                 | The number of directly string assignments     |
 | 11  | concat                    | The number of concat                          |
 | 12  | indexOf                   | The number of indexOf                         |
