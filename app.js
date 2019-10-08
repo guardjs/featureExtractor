@@ -2,21 +2,31 @@
 
 /**
  *  Developed by easa 
- *  this is a test page by now :
+ *  this is a test page by now!
+ *  using yargs to parse args
  * 
- * requisites:            nodejs
- * $ node app "string"          // will extract the argument or the sample string
- * string is optional
+ * requisites: nodejs, npm i
+ * 
+ * $ node app [command] --[option] --[option] so on...
+ * 
+ * to save result on file use "> filename" command
 */
+var mid = require('./middlware/')
+var app = require('./app/')
 
-var app = require('./app/index')
+var result = [],
+  opt = mid.argv || {}
+samplestr = `this is 'hello' and this is var word="world" !`,
+  str = opt.input || samplestr
 
-var result = [], str = process.argv[2] || `this is 'hello' and this is var word="world" !`
+// result the list of feature names
+if (opt.isFeatureNameRequired)
+  console.log(Object.keys(app).reduce((i, c) => i += ', ' + c))
 
+// break if no need to the features
+if (!opt.isRawRequired) return void 0
 
-// call all functions
+// main algorithem 
+
 Object.keys(app).forEach(func => { result.push(app[func](str)) })
-
-// log all results
-console.log(`-----features: \n ${Object.keys(app).reduce((i, c) => i += ', ' + c)}`)
-console.log(`-----feature-raw: \n ${result.reduce((i, c) => i += ', ' + c)}`)
+console.log(result.reduce((i, c) => i += ', ' + c))

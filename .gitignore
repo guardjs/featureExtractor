@@ -1,3 +1,9 @@
+# result files
+result/
+# samples
+sample/
+data/
+
 # Logs
 logs
 *.log
