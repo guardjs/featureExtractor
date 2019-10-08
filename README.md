@@ -9,12 +9,14 @@ It is for getting these specific features from js files, but thanks to beautiful
 ## Usage  
 * install requisites by `npm i`
 * use `--help` command to get helped with this app
-* app works with `serve` command like `$ node app serve`
+* app works with `serve` command like `$ node app serve >>resultfile`
 
 ### Commands
-* `serve --directory="$workspace\samples" --result="result.csv"`
-* `serve -d="$workspace\samples" -d="result.csv" -a` for append new feature value raw to an existing file
-* `features` to show just a the feature set
+1. `feature >>result/1.csv` to show just a the feature set
+2. `serve >>result/1.csv` it should work totally
+#### alternatives for the 2th command
+* `serve --directory="$workspace\samples" >>result/1.csv`
+* `serve -d="$workspace\samples" >>result/1.csv` 
 
 # Feature set
 Attention: the order of features are by the order of files of feature-model that the app uses and the order of features here isn't a default order! THERE'S NOT ANY ORDER  
