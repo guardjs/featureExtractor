@@ -15,7 +15,7 @@ var mid = require('./middlware/')
 var app = require('./app/')
 
 var result = [],
-  opt = mid.argv || {}
+  opt = mid.cmd || {}
 samplestr = `this is 'hello' and this is var word="world" !`,
   str = opt.input || samplestr
 
