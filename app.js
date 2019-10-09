@@ -16,7 +16,7 @@ var app = require('./app/')
 
 var result = [],
   opt = mid.cmd || {}
-samplestr = `this is a 'hello' and this is var word="world" !`,
+samplestr = `this is a 'hello' and this iframe is var word="iframe" !`,
   str = opt.input || samplestr
 
 // result the list of feature names

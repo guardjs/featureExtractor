@@ -11,7 +11,6 @@ function app(str) {
     return multiple
   }, 0)
   return (weightXword / count) | 0
-  // return space / wordCount ??? no
 }
 
 module.exports = app
