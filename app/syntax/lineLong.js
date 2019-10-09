@@ -1,16 +1,12 @@
 
 
-// var wordMap = require('./common/parseWords')
+var rgxmatch = require('./common/exRgxPatt')
 
 function app(str) {
-  var line = str.match(/([\w\W])\n/g)
-  // var wMap = wordMap(str)
-  if (!line) return 0
+  var line = rgxmatch(str, /([\w\W][^\n])*/g) || []
   var linelong = line.map(i => i.length)
-  var avgLong = linelong.reduce((p, c) => { p += c; return p }, 0) / linelong.length
+  var avgLong = linelong.reduce((p, c) => { p += (c ? c : 0); return p }, 0) / linelong.length
   return avgLong
-  // var total = wordcount(str, wMap)
-  // return ((total / ((lline && lline.length > 0) ? lline.length : 1) * 10000) | 0)
 }
 
 module.exports = app

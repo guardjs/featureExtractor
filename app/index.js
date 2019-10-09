@@ -1,7 +1,8 @@
 
 
 var fs = require('fs')
-var app = {}
+var rgxFeatures = require('./syntax/rgxPatternCounter')
+var app = rgxFeatures()
 
 /**
  * folders to look for feature extraction function
@@ -16,7 +17,7 @@ function load(folder) {
 		var featureName = app[file] ? (folder + file) : file
 		featureName = /^([\d\w]+)\.js/gi.exec(featureName)
 		if (!featureName) return 0
-
+		// feature : value
 		app[featureName[1]] = require(`./${folder}/${file}`)
 	})
 }
