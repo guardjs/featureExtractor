@@ -8,15 +8,15 @@ It is for getting these specific features from js files, but thanks to beautiful
 
 ## Usage  
 * install requisites by `npm i`
-* use `--help` command to get helped with this app
+* use `$ node app --help` command to get helped with this app
 * app works with `serve` command like `$ node app serve >>resultfile`
 
 ### Commands
-1. `feature >>result/1.csv` to show just a the feature set
-2. `serve >>result/1.csv` it should work totally
+1. `$ node app feature >>result/1.csv` to show just a the feature set
+2. `$ node app serve >>result/1.csv` it should work totally
 #### alternatives for the 2th command
-* `serve --directory="$workspace\samples" >>result/1.csv`
-* `serve -d="$workspace\samples" >>result/1.csv` 
+* `$ node app serve --directory="$workspace\samples" >>result/1.csv`
+* `$ node app serve -d="$workspace\samples" >>result/1.csv` 
 
 # Feature set
 Attention: the order of features are by the order of files of feature-model that the app uses and the order of features here isn't a default order! THERE'S NOT ANY ORDER  

@@ -1,7 +1,7 @@
 
 
-var argv = require('./yargs')
-
+var yargs = require('./yargs')
+var file = require('./files')
 module.exports = {
-  argv: argv
+  cmd: yargs
 }
