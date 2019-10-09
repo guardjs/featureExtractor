@@ -29,7 +29,8 @@ if (opt.isFeatureCountRequired)
 // break if no need to the features
 if (!opt.isRawRequired) return void 0
 
-// main algorithem 
-
+// running feature extraction on input string
 Object.keys(app).forEach(func => { result.push(app[func](str)) })
+
+// export result
 console.log(result.reduce((i, c) => i += ', ' + c))

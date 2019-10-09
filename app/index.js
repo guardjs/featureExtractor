@@ -17,7 +17,7 @@ function load(folder) {
 		var featureName = app[file] ? (folder + file) : file
 		featureName = /^([\d\w]+)\.js/gi.exec(featureName)
 		if (!featureName) return 0
-		// feature : value
+		// feature : feature extractor model
 		app[featureName[1]] = require(`./${folder}/${file}`)
 	})
 }
