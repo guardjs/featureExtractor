@@ -28,6 +28,8 @@ yargs.command('serve [d]', 'creates the features', (yargs) => {
   default: './result/default.csv'
 }).command('feature', 'show the features list', (yargs) => { }, (param) => {
   opt.isFeatureNameRequired = true
+}).command('fcount', 'show the count of features', (yargs) => { }, (param) => {
+  opt.isFeatureCountRequired = true
 }).argv
 
 module.exports = opt
