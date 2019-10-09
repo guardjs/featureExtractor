@@ -15,7 +15,8 @@ function load(folder) {
 	files.forEach(file => {
 		var featureName = app[file] ? (folder + file) : file
 		featureName = /^([\d\w]+)\.js/gi.exec(featureName)
-		if (!featureName) return 0
+		// prevent this file from loading
+		if (!featureName || 'index'.indexOf(featureName[1]) >= 0) return void 0
 		// feature : feature extractor model
 		app[featureName[1]] = require(`./${folder}/${file}`)
 	})
