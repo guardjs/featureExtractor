@@ -16,12 +16,15 @@ var app = require('./app/')
 
 var result = [],
   opt = mid.cmd || {}
-samplestr = `this is 'hello' and this is var word="world" !`,
+samplestr = `this is a 'hello' and this is var word="world" !`,
   str = opt.input || samplestr
 
 // result the list of feature names
 if (opt.isFeatureNameRequired)
   console.log(Object.keys(app).reduce((i, c) => i += ', ' + c))
+
+if (opt.isFeatureCountRequired)
+  console.log(Object.keys(app).length)
 
 // break if no need to the features
 if (!opt.isRawRequired) return void 0
