@@ -1,25 +1,23 @@
+var syntaxesFeatures = require('./syntax')
 
+var app = syntaxesFeatures,
+	kys = Object.keys(app)
 
-var fs = require('fs')
-var rgxFeatures = require('./syntax/rgxPatternCounter')
-var app = rgxFeatures()
-
-/**
- * folders to look for feature extraction function
- */
-var folders = ['syntax']
-folders.forEach(folder => { load(folder) })
-
-function load(folder) {
-	var files = fs.readdirSync(__dirname + '\\' + folder)
-	if (!files) throw new Error(err)
-	files.forEach(file => {
-		var featureName = app[file] ? (folder + file) : file
-		featureName = /^([\d\w]+)\.js/gi.exec(featureName)
-		if (!featureName) return 0
-		// feature : value
-		app[featureName[1]] = require(`./${folder}/${file}`)
-	})
+var func = {
+	isFeatureNameRequired: () => kys.reduce((res, name) => res += ', ' + name),
+	isFeatureCountRequired: () => kys.length,
+	isRawRequired: function () {
+		return kys.reduce((res, func) => {
+			return res += `${res !== '' ? ', ' : ''}${app[func](this.input)}`
+		}, '')
+	}
 }
 
-module.exports = app
+module.exports = function (opt) {
+	return Object.keys(opt).reduce((result, i) => {
+		if (opt[i] && typeof func[i] === 'function') {
+			result += func[i].call(opt)
+			return result
+		} return result
+	}, '')
+}
