@@ -9,8 +9,13 @@
  * 
  * to save result on file use "> filename" command
  */
-var mid = require('./middlware/')
+var mid = require('./utility/')
+var cmd = require('./interface/')
+var app = require('./app/')
 
+// bind-chain(app).interface(cmd).file(mid.file). so on 
+
+cmd(app)
 var opt = mid.cmd || {}
 opt.input = opt.input || `this is a 'hello' and this iframe is var word="iframe" !`
 
