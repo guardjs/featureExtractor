@@ -1,5 +1,5 @@
 
 
 require('./serve')
-require('./featureCount')
-require('./featureList')
+require('./count')
+require('./list')
