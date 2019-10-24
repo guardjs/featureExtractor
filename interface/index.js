@@ -11,8 +11,8 @@ var modules = {
 yargs.command('$0', `commands are: ${Object.keys(modules).join(', ')}`, (arg) => { }, (param) => {
   // FIXME: these are unnecessary
   var commands = Object.keys(modules)
-  var condition = Object.keys(param).filter(p => commands.includes(p)).length > 0
-  console.log(condition)
+  var condition = param._.filter(p => commands.includes(p)).length > 0
+  // log : console.log(param, condition)
   if (condition) return void 0
   yargs.showHelp()
 })
