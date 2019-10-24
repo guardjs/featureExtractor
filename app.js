@@ -9,7 +9,7 @@
  * 
  * to save result on file use "> filename" command
  */
-var mid = require('./utility/')
+// var mid = require('./utility/')
 var cmd = require('./interface/')
 var app = require('./app/')
 

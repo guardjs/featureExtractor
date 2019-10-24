@@ -4,21 +4,25 @@ var yargs = require('yargs')
 
 module.exports = app => {
   yargs.command('serve [d]', 'creates the features', (arg) => {
-    arg.positional('d', {
-      describe: '"data" - directory to bind features from the javascript files insied of it',
-      default: './data'
-    })
-    arg.positional('inputLine', {
+    arg.positional('data', {
+      alias: 'd',
       type: 'string',
-      require: true,
-      describe: '"input string" - a string line as input',
-      alias: 'i'
+      default: './data',
+      describe: '"directory of JS files as input',
+    })
+    arg.positional('input', {
+      alias: 'i',
+      type: 'string',
+      describe: 'input JS code text'
     })
   }, param => {
-    if (typeof param.inputLine === 'string')
+    if (typeof param.input === 'string')
       console.log(app.extractfeaturesRaw(param.inputLine))
-    else
+    // else if (typeof param.data === 'string') { }
+    else {
+      console.log('underconstruction')
       yargs.showHelp()
+    }
   }).argv
 }
 
