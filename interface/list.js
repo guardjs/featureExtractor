@@ -2,8 +2,9 @@
 
 var yargs = require('yargs')
 
-yargs.command('list', 'show the features list', (arg) => { }, (param) => {
-  opt.isFeatureNameRequired = true
-}).argv
 
-module.exports = (app)=>{console.log(app)}
+module.exports = app => {
+  yargs.command('list', 'show the features list', (arg) => { }, (param) => {
+    console.log(app.getListOfFeaturesName())
+  }).argv
+}
