@@ -1,6 +1,6 @@
 {
   "name": "extatistical.js",
-  "version": "1.2.0",
+  "version": "1.2.4",
   "description": "this package will extract statistical features from code string ",
   "main": "app.js",
   "scripts": {

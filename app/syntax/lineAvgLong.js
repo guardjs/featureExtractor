@@ -6,7 +6,7 @@ function app(str) {
   var line = rgxmatch(str, /([\w\W][^\n])*/g) || []
   var linelong = line.map(i => i.length)
   var avgLong = linelong.reduce((p, c) => { p += (c ? c : 0); return p }, 0) / linelong.length
-  return avgLong
+  return avgLong * 10 | 0
 }
 
 module.exports = app
