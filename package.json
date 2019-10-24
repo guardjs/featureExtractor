@@ -1,6 +1,6 @@
 {
   "name": "extatistical.js",
-  "version": "1.1.0",
+  "version": "1.2.4",
   "description": "this package will extract statistical features from code string ",
   "main": "app.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/safeguardians/malwareFeatureExtractor.git"
+    "url": "git+https://github.com/guardjs/featureExtractor.git"
   },
   "keywords": [
     "feature",
@@ -19,10 +19,17 @@
   "author": "easa",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/safeguardians/malwareFeatureExtractor/issues"
+    "url": "https://github.com/guardjs/featureExtractor/issues"
   },
-  "homepage": "https://github.com/safeguardians/malwareFeatureExtractor#readme",
+  "homepage": "https://github.com/guardjs/featureExtractor#readme",
   "dependencies": {
     "yargs": "^14.0.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.5.0",
+    "@typescript-eslint/parser": "^2.5.0",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
   }
 }
