@@ -1,4 +1,5 @@
 # Feature Extractor
+V 1.2.4
 This app extracts features from source code files.  
 This project is part of the [Guardjs](https://guardjs.github.io) organization.
 
@@ -76,12 +77,16 @@ Attention: the order of features are by the order of files of feature-model that
 .
 +-- - app  
 |   +-- - syntax  
+    |   +-- index.js # this will handle all suntax features  
+    |   +-- + rgxPatternCounter # the models inside this folder are simple regex functions   
     |   +-- + common  
 |   +-- - graph  
     |   +-- + common  
 |   +-- index.js  
-+-- - middleware  
-|   +-- yargs.js  
++-- - interface # commands going here   
+|   +-- serve.js  
+|   +-- list.js  
+|   +-- count.js  
 |   +-- index.js  
 +-- app.js
 ```
