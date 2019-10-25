@@ -1,10 +1,13 @@
 
 
 var primitive = require('./primitive/')
-var p = primitive(true)
+var graph = primitive(true)
 
 function app(str) {
-  console.log(p.edge(str), p.node(str))
+  var nodes = graph.node(str).length
+  if (nodes >= 0)
+    return (graph.edge(str).length / nodes * 10) | 0
+  return 0
 }
 
 module.exports = app
