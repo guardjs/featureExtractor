@@ -1,6 +1,11 @@
-var syntaxesFeatures = require('./syntax')
 
-var kys = Object.keys(syntaxesFeatures)
+
+var syntaxesFeatures = require('./syntax')
+var graphesFeatures = require('./graph')
+
+var features = Object.assign(syntaxesFeatures, graphesFeatures)
+
+var kys = Object.keys(features)
 
 /**
  * getListOfFeaturesName, 
