@@ -17,7 +17,7 @@ exports.builder = (arg) => {
 }
 exports.handler = argv => {
   if (typeof argv.input === 'string')
-    console.log(argv.app.extractfeaturesRaw(argv.inputLine))
+    console.log(argv.app.extractfeaturesRaw(argv.input))
   // else if (typeof argv.data === 'string') { }
   else {
     console.log('underconstruction')

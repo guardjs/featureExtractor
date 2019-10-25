@@ -10,13 +10,8 @@
 var app = require('./app/')
 
 require('yargs')
-  .middleware(appendApplication)
+  .middleware(argv => argv.app = app)
   .commandDir('./command/')
   .demandCommand()
   .help()
   .argv
-
-function appendApplication(argv) {
-  argv.app = app
-  return argv
-}

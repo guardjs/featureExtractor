@@ -1,4 +1,4 @@
 
 
-var yargs = require('../interface')
+var yargs = require('./cfg')
 var file = require('./files')
