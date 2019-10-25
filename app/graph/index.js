@@ -1,7 +1,7 @@
 
 
 var fs = require('fs')
-var rgxFeatures = require('./rgxPatternCounter')
+var rgxFeatures = require('./primitive')
 var app = rgxFeatures()
 
 /**
