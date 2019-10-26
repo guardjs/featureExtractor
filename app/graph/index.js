@@ -1,6 +1,7 @@
 
 
 var fs = require('fs')
+var getDotGraph = require('./common/cfg')
 var app = {}
 
 /**
@@ -17,7 +18,11 @@ function load(folder) {
 		// prevent this file from loading
 		if (!featureName || 'index'.indexOf(featureName[1]) >= 0) return void 0
 		// feature : feature extractor model
-		app[featureName[1]] = require(`./${folder}/${file}`)
+		app[featureName[1]] = function (strCode) {
+			// preparing
+			var dotGraph = getDotGraph(strCode)
+			return require(`./${folder}/${file}`)(dotGraph)
+		}
 	})
 }
 
