@@ -1,12 +1,9 @@
 
 
-var primitive = require('./primitive')
-var getloops = require('./common/loop')
-var graph = primitive(true)
+var getEdges = require('./common/edge')
 
 function app(str) {
-	var edges = graph.edge(str)
-	console.log(edges)
+	var edges = getEdges(str)
 	if (!edges || edges.length < 1) return 0
 	var result = edges.reduce((prev, curr) =>
 		prev += curr.label == "exception" ? 1 : 0

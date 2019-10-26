@@ -1,8 +1,7 @@
 
 
 var fs = require('fs')
-var rgxFeatures = require('./primitive')
-var app = rgxFeatures()
+var app = {}
 
 /**
  * folders to look for feature extraction function
