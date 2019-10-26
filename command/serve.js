@@ -20,6 +20,7 @@ exports.handler = argv => {
     console.log(argv.app.extractfeaturesRaw(argv.input))
   // else if (typeof argv.data === 'string') { }
   else {
+    // TODO: look for files in folder and extractfeaturesRaw for each file
     console.log('underconstruction')
   }
 }

@@ -3,11 +3,11 @@
 var rgxmatch = require('../common/exRgxPatt')
 var features = require('./patterns')
 
-function app(str) {
+function app() {
   var result = {}
-  Object.keys(features).forEach(f => {
-    var rgx = features[f]
-    result[f] = function (str) { return rgxmatch(str, rgx).length }
+  Object.keys(features).forEach(model => {
+    var rgx = features[model]
+    result[model] = str => rgxmatch(str, rgx).length
   })
   return result
 }

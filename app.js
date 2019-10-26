@@ -8,9 +8,14 @@
  */
 
 var app = require('./app/')
+var filehandler = require('./fileHandler/')
 
 require('yargs')
-  .middleware(argv => argv.app = app)
+  .middleware(argv => {
+    argv.app = app
+    argv.file = filehandler
+    return argv
+  })
   .commandDir('./command/')
   .demandCommand()
   .help()

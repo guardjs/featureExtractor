@@ -7,8 +7,8 @@
  * @param {regex pattern to match} pattern 
  */
 function app(codeString, pattern) {
-	if (typeof codeString !== 'string') throw new Error('param codeString should be code string')
-	if (!pattern) throw new Error('param pattern should be code string')
+	if (typeof codeString !== 'string') throw new Error('Param "codeString" should be code string')
+	if (!pattern) throw new Error('Param "pattern" should be a pattern')
 
 	var matches = codeString.match(pattern)
 	return matches ? matches : []
